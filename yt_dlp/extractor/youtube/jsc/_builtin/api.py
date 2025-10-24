@@ -122,10 +122,11 @@ class ApiJCP(JsChallengeProvider, BuiltinIEContentProvider):
         }
 
         if self._api_token:
-            headers['authorization'] = self._api_token  # Note: lowercase 'authorization'
-            self.logger.debug("Using API token: " + self._api_token[:4] + '...')  # Only log first 4 chars for security
+            headers['Authorization'] = self._api_token  # Direct token, no "Bearer" prefix
+            self.logger.debug("Using API token for authentication")
 
         try:
+            print(headers)
             request = Request(
                 url,
                 data=json.dumps(data).encode('utf-8'),
