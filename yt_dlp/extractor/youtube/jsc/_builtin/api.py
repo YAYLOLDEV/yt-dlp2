@@ -35,6 +35,7 @@ class ApiJCP(JsChallengeProvider, BuiltinIEContentProvider):
         self._api_base_url = self._configuration_arg(
             'api_url', default=['https://cipher.kikkia.dev'])[0]
         self._api_token = self._configuration_arg('api_token', default=[''])[0]
+        print(self._api_token)
 
     def is_available(self) -> bool:
         """Check if the API provider is available"""
