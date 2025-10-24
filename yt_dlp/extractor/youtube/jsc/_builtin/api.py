@@ -76,10 +76,10 @@ class ApiJCP(JsChallengeProvider, BuiltinIEContentProvider):
                 }
                 response = self._api_request('decrypt_signature', payload, video_id)
                 decrypted_sig = response.get('decrypted_signature', '')
-                
+
                 if not decrypted_sig:
                     raise JsChallengeProviderError(f'API returned empty signature for challenge', expected=False)
-                
+
                 results[challenge] = decrypted_sig
                 self.logger.debug(f'Decrypted sig via API: {challenge[:20]}... => {decrypted_sig[:20]}...')
             except Exception as e:
@@ -103,10 +103,10 @@ class ApiJCP(JsChallengeProvider, BuiltinIEContentProvider):
                 }
                 response = self._api_request('decrypt_signature', payload, video_id)
                 decrypted_n = response.get('decrypted_n_sig', '')
-                
+
                 if not decrypted_n:
                     raise JsChallengeProviderError(f'API returned empty n-parameter for challenge', expected=False)
-                
+
                 results[challenge] = decrypted_n
                 self.logger.debug(f'Decrypted nsig via API: {challenge[:20]}... => {decrypted_n[:20]}...')
             except Exception as e:
@@ -120,9 +120,10 @@ class ApiJCP(JsChallengeProvider, BuiltinIEContentProvider):
         headers = {
             'Content-Type': 'application/json',
         }
-        
+
         if self._api_token:
             headers['Authorization'] = self._api_token
+            self.logger.debug("API token: " + self._api_token)
 
         try:
             request = Request(
@@ -130,7 +131,7 @@ class ApiJCP(JsChallengeProvider, BuiltinIEContentProvider):
                 data=json.dumps(data).encode('utf-8'),
                 headers=headers,
             )
-            
+
             response_data = self.ie._download_json(
                 request,
                 video_id,
@@ -138,7 +139,7 @@ class ApiJCP(JsChallengeProvider, BuiltinIEContentProvider):
                 errnote=f'Failed to contact API at {url}',
                 fatal=True,
             )
-            
+
             return response_data
         except Exception as e:
             raise JsChallengeProviderError(f'API request to {url} failed: {e}', expected=False) from e
