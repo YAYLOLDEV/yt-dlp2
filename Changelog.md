@@ -4,6 +4,46 @@
 # To create a release, dispatch the https://github.com/yt-dlp/yt-dlp/actions/workflows/release.yml workflow on master
 -->
 
+### 2025.10.24.135717
+
+#### Important changes
+- **The minimum *required* Python version has been raised to 3.10**
+Python 3.9 has reached its end-of-life as of October 2025, and yt-dlp has now removed support for it. [Read more](https://github.com/yt-dlp/yt-dlp/issues/13858)
+
+#### Core changes
+- [Add Api Cipher decryption using https://github.com/kikkia/yt-cipher/](https://github.com/yt-dlp/yt-dlp/commit/ec07926098daf20c9dd4e85a7bc63ec005f38fb0) by [pukkandan](https://github.com/pukkandan)
+- [Add Api Cipher decryption using https://github.com/kikkia/yt-cipher/](https://github.com/yt-dlp/yt-dlp/commit/0962de2420bf01fcd12e62a1556158c3fd8c0bb6) by [pukkandan](https://github.com/pukkandan)
+- [Add Api Cipher decryption using https://github.com/kikkia/yt-cipher/](https://github.com/yt-dlp/yt-dlp/commit/6399631c035646301125300c7109bdef58c80cc2) by [pukkandan](https://github.com/pukkandan)
+- [Add logging back and fix imports](https://github.com/yt-dlp/yt-dlp/commit/e7249d894c93ab10f41773282e86238d24c4d234) by [pukkandan](https://github.com/pukkandan)
+- [Add yt-dlp-ejs to default dependencies](https://github.com/yt-dlp/yt-dlp/commit/e55fe239fbe57c3979e6a5d6d09e7f09bd3526a8) by [pukkandan](https://github.com/pukkandan)
+- [Adjust signature tests](https://github.com/yt-dlp/yt-dlp/commit/cf571fae7e625b0bafd18e22b708376d79c0e5f8) by [pukkandan](https://github.com/pukkandan)
+- [Fix encoding for Windows](https://github.com/yt-dlp/yt-dlp/commit/665181db3cc2595f1301835de61701780c15c071) by [bashonly](https://github.com/bashonly)
+- [Fix the issue I myself created](https://github.com/yt-dlp/yt-dlp/commit/2af7d3c82976251518d47af1b658a182840e8b8e) by [pukkandan](https://github.com/pukkandan)
+- [Have update_ejs.py update pyproject](https://github.com/yt-dlp/yt-dlp/commit/54704bcb9355a05bc2e096094451f428d002b366) by [pukkandan](https://github.com/pukkandan)
+- [Implement caching for player code](https://github.com/yt-dlp/yt-dlp/commit/9693162312c10a97d35ae7a3b9e28d58338234b5) by [pukkandan](https://github.com/pukkandan)
+- [Lower nodejs requirement to v20](https://github.com/yt-dlp/yt-dlp/commit/79b205b0c141134868d5475e135079084ad99a9c) by [pukkandan](https://github.com/pukkandan)
+- [Merge branch 'Grub4K:feat/jsc-deno' into feat/jsc-deno](https://github.com/yt-dlp/yt-dlp/commit/9abdce1542ef43511455dd79a858559512350931) by [pukkandan](https://github.com/pukkandan)
+- [Merge branch 'yt-dlp:master' into feat/jsc-deno](https://github.com/yt-dlp/yt-dlp/commit/626dec4f9355b9ed8b19c6c646ea9e18c687ef36) by [pukkandan](https://github.com/pukkandan)
+- [Migrate youtube signature tests to jsc](https://github.com/yt-dlp/yt-dlp/commit/94bc1cd1a5f0318abef779c719f7494ce019eab4) by [pukkandan](https://github.com/pukkandan)
+- [Pass proxy and --no-check-certificate to bun](https://github.com/yt-dlp/yt-dlp/commit/076f875c2555faaa0401c506962d80ca577efda1) by [pukkandan](https://github.com/pukkandan)
+- [Pass proxy and --no-check-certificate to deno](https://github.com/yt-dlp/yt-dlp/commit/9fa6ab2a5bb72d8f1176ae175693906e0e98b172) by [pukkandan](https://github.com/pukkandan)
+- [Remove Python 3.9 support](https://github.com/yt-dlp/yt-dlp/commit/4e6a693057cfaf1ce1f07b019ed3bfce2bf936f6) ([#13861](https://github.com/yt-dlp/yt-dlp/issues/13861)) by [bashonly](https://github.com/bashonly)
+- [Update hashes and version and add devscript](https://github.com/yt-dlp/yt-dlp/commit/658f7926cfcd4265206252110dce7d0ba5ebf89f) by [pukkandan](https://github.com/pukkandan)
+- [Update minimum js runtime versions](https://github.com/yt-dlp/yt-dlp/commit/9ad17705c7f3cbdbb453ec7ad4e94f47965a7611) by [pukkandan](https://github.com/pukkandan)
+- [Update vendored `yt-dlp-ejs` to 0.2.0](https://github.com/yt-dlp/yt-dlp/commit/8b53531966692b933eebaa68965f64e4109ee317) by [pukkandan](https://github.com/pukkandan)
+- [Use `importlib.resources.files` api](https://github.com/yt-dlp/yt-dlp/commit/c88d6ed4634b8c7b964fc8a49ffdb8aa0c8a18fd) by [pukkandan](https://github.com/pukkandan)
+- [bruh](https://github.com/yt-dlp/yt-dlp/commit/2340341e066f544c9af51d728e35511b29d1eccf) by [pukkandan](https://github.com/pukkandan)
+- [make ruff happy](https://github.com/yt-dlp/yt-dlp/commit/fb4e99e657117eb0c0d6a32e118a62f7eff6eccd) by [bashonly](https://github.com/bashonly)
+- [sleep please](https://github.com/yt-dlp/yt-dlp/commit/e86be4167e86d2818b7ea681a402c5d51b39d0e9) by [pukkandan](https://github.com/pukkandan)
+- [update ejs to 0.2.1](https://github.com/yt-dlp/yt-dlp/commit/5ee244931224e25bc93dadf3539bb5190fbee754) by [bashonly](https://github.com/bashonly)
+
+#### Extractor changes
+- **appleconnect**: [Rework extractor](https://github.com/yt-dlp/yt-dlp/commit/78748b506f0dca8236ac0045ed7f72f7cf334b62) ([#13229](https://github.com/yt-dlp/yt-dlp/issues/13229)) by [doe1080](https://github.com/doe1080)
+- **tvnoe**: [Rework Extractor](https://github.com/yt-dlp/yt-dlp/commit/fe5ae54a7b08ebe679f03afdeafbe1cee5784d5b) ([#13369](https://github.com/yt-dlp/yt-dlp/issues/13369)) by [doe1080](https://github.com/doe1080)
+
+#### Misc. changes
+- **cleanup**: Miscellaneous: [c7bda21](https://github.com/yt-dlp/yt-dlp/commit/c7bda2192aa24afce40fdbbbe056d269aa3b2872) by [bashonly](https://github.com/bashonly), [seproDev](https://github.com/seproDev)
+
 ### 2025.10.14
 
 #### Core changes
